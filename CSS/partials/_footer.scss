@@ -1,0 +1,208 @@
+footer {
+	color:white;
+	background-color: #303238;
+}
+
+footer h4 {
+	text-transform: uppercase;
+	font-size: 1.6rem;	
+	color: grey;
+}
+
+.footerBox {
+	float: left;
+	width: calc(22% - 10px - 10px);
+	margin: 10px;
+}
+
+.wideFooter {
+	float: left;
+	width: calc(28% - 10px - 10px);
+}
+
+//These also affect footer on Index.html
+.contactContainer ul, .recent.posts ul, ul.tags {
+	padding-left:0;
+	list-style: none;
+}
+
+.contactBox .info ul, .indexContact .info ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+.contactBox {
+	padding:10px 0;
+}
+
+.bottomBorder {
+	border-bottom: 1px dotted #45474c;
+}
+
+.social.colorGrey {
+	padding-top:12px;
+}
+
+.contactBox .info li, .indexContact .info li {
+	padding: 2px;
+	display: inline-block;
+}
+
+.contactBox .info li a, .indexContact .info li a {
+	text-decoration: none;
+	color: black;
+	&:hover {
+		color: #f5af0c;
+	}
+}
+
+.contactBox .social.colorGrey li a {
+	color:grey;
+	&:hover {
+		color:#f5af0c;
+	}
+}
+
+.contactBox .label, .indexContact .label {
+	color: grey;
+	font-style: italic;
+	margin-right: 15px;
+}
+
+.contactBox .info p, .indexContact .info p {
+	margin-bottom: 0;
+}
+.contactBox .info p:nth-of-type(2), .indexContact .info p:nth-of-type(2) {
+	margin-top: 0;
+}
+
+//Index specific styles due to different layout
+
+ul.topLine, ul.bottomLine {
+	padding-left:0;
+	list-style: none;
+}
+
+.topLine .indexContact, .bottomLine .indexContact {
+	float: left;
+	width:calc(50% - 15px - 15px);
+	margin: 0 15px;
+}
+
+.label{
+	float: left;
+	width:calc(30% - 15px);
+}
+
+.info {
+	float: left;
+	width:calc(70% - 15px - 15px);
+}
+
+.indexContact ul.social {
+	margin: 0;
+}
+
+
+.indexContact .followLabel p{
+	margin-top: 0;
+}
+
+//Footer continues
+
+.darkgrey {
+	float: left;
+	width: 25%;
+	height: 50px;
+	width: 50px;
+	background: black;
+	margin: 2px;
+}
+
+.tags li {
+	margin: 2px;
+	padding: 2%;
+	background: #3a3c43;
+	transition: all 0.5s ease-in;
+	display: inline-block;
+}
+
+.tags li a {
+	color:grey;
+	text-decoration: none;
+	font-style: italic;
+	font-size: 1.2rem;
+}
+
+.tags li:hover {
+	background-color:goldenrod;
+}
+
+.tags li:hover a {
+	color:white;
+}
+
+.post:hover h5 {
+	color: goldenrod;
+}
+
+.postImg, .postInfo {
+	float: left;
+}
+
+.postImg {
+	width:30%;
+	margin-bottom: 15px;
+}
+
+.postInfo {
+	width:67%;
+	h5 {
+		letter-spacing: 1px;
+		text-transform: none;
+		font-size: 1rem;
+	}
+	p {
+		font-style:italic;
+		font-size: 1.2rem;
+		color:lightgrey;
+	}
+}
+
+.post .postImg {
+	width: 50px;
+	height: 50px;
+}
+
+.post .yellow {
+	background: goldenrod;
+}
+
+.post .black {
+	background: black;
+}
+
+.post .postInfo {
+	margin-left: 15px;
+}
+
+.post .postInfo p, .post .postInfo h5 {
+	margin:0;
+	margin-top:3px;
+}
+
+.belowFooter {
+	clear: both;
+	padding:15px 0;
+	color:grey;
+	background: #292b30;
+}
+
+.belowFooter .left {
+	float: left;
+}
+
+.belowFooter .right {
+	float: right;
+}
+

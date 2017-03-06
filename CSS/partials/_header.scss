@@ -1,0 +1,176 @@
+header.homeHeader, header.contactHeader {
+	height: 100vh;
+	position: relative;
+	& h3, h1 {
+		color: white;
+		letter-spacing: 2px;
+		text-shadow: 1px 1px 1px grey;
+	}
+}
+
+header.homeHeader {
+	background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ), url(../images/hero_home.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+header.contactHeader {
+	background-image: url(../images/iphone_glasses.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+header nav {
+	padding: 2%;
+}
+
+nav ul {
+	list-style: none;
+	padding-left: 0;
+	text-transform: uppercase;
+}
+
+nav ul li {
+	color: white;
+	&:hover {
+		color:#f5af0c;
+	}
+}
+
+
+
+nav img {
+	display: block;
+	padding-right: 15%;
+}
+
+.rightSide {
+	float: left;
+	width:50%;
+	text-align:right;
+	// margin-top:40px;
+}
+
+.leftSide {
+	float: left;
+	width:50%;
+}
+
+// .leftSide a {
+// 	font-size: 0;
+// }
+
+.rightSide li, .leftSide li {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+nav li a {
+	padding: 0 10px;
+	color: white;
+	&:hover {
+		color:#f5af0c;
+
+	}
+}
+
+.leftSide li:first-child {
+	padding: 0 15px;
+}
+
+.leftSide li:first-child a {
+	display: block;
+}
+
+.mainHeader {
+	text-align: center;
+}
+
+.paddingLarge {
+	padding-top: 300px;
+}
+
+.paddingSmall {
+	padding-top: 250px;
+}
+
+.mainHeader h3 {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.mainHeader h1 {
+	margin: 0;
+	padding: 0 0 2% 0 ;
+}
+
+.scrollImg {
+	position: absolute;
+	bottom: 15px;
+	left:50%;
+}
+
+.contactNav li:nth-child(even) {
+	padding: 0 15px 0 5px;
+}
+
+hr {
+	border:1px dashed #e5e5e5;
+}
+
+ul.leftSide li.logoFaq a {
+	padding:0;
+}
+
+// FAQ Nav styling - black on white
+nav.darkNav, nav.topNav {
+	padding:0 2%;
+}
+
+nav.topNav {
+	display: block;
+}
+
+nav.darkNav ul li a, nav.darkNav ul li{
+	color:#303238;
+	&:hover {
+		color:#f5af0c;
+	}
+}
+
+nav.topNav ul li {
+	color:#303238;
+	display: inline-block;
+	padding: 0 7px;
+}
+
+nav.topNav ul li a {
+	color:#303238;
+	text-decoration: none;
+	&:hover {
+		color: #f5af0c;
+	}
+}
+
+.topLeftNav, .topRightNav {
+	width:50%;
+	display:inline-block;
+}
+
+.topLeftNav {
+	float: left;
+}
+
+.topRightNav {
+	float: right;
+	text-align:right;
+}
+
+
+
+

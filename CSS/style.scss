@@ -1,0 +1,556 @@
+@import "partials/normalize";
+@import "partials/variables";
+@import "partials/header";
+@import "partials/footer";
+
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: $sansSerif;
+	color: #303238;	
+}
+
+p, a, li, input, button {
+	font-size: 1.4rem;
+}
+
+h1, h2, h4, h5, h6 {
+	font-family: $sansSerifTitle;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+h1 {
+	font-size: 3.8rem;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+h3 {
+	font-size: 2.5rem;
+	font-family: $cursive;
+}
+
+h4 {
+	font-size: 1.9rem;
+}
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+//Styling to include labels but move them off page for accessibility
+form label {
+	position: absolute;
+	left:-999999999px;
+}
+
+label[for=search] {
+	position: absolute;
+	left:-999999999px;
+}
+
+//form styling used across all pages
+
+form button {
+	background: none;
+	text-transform: uppercase;
+	padding: 1% 2%;
+	border: 2px solid black;	
+}
+
+form button:hover {
+	background: black;
+	color:white;
+	transition:all 0.5s ease-in;
+}
+
+button.yellowButton {
+	background: #f5af0c;
+	// text-transform: uppercase;
+	// color:white;
+	border: 2px solid transparent;
+	padding: 1% 2%;
+	& a {
+		text-transform: uppercase;
+		color:white;
+		text-decoration: none;
+	}
+}
+
+button.yellowButton:hover {
+	background: none;
+	border:2px solid #f5af0c;
+	transition:all 0.3s ease-in;
+}
+
+form input, .search input {
+	background: none;
+	outline:none;
+	padding: 10px 0;
+	border: none;
+	border-bottom: 2px solid black;
+}
+
+.search a .fa-search {
+	color:lightgrey;
+}
+
+form input {
+	&::-webkit-input-placeholder {
+		text-transform: uppercase;
+	}
+}
+
+form input::placeholder {
+	text-transform: uppercase;
+}
+
+
+//.headerGroup Used across all pages
+.headerGroup {
+	text-align: center;
+}
+.headerGroup h2 {
+	margin-bottom: 20px;
+}
+
+.headerGroup p {
+	width: 55%;
+	margin: 3% auto;
+	font-style: italic;
+}
+
+//Line Decoration on buttons, index page
+
+ p.lineDeco {
+	text-align: center;
+	position:relative;
+	display: inline-block;
+	 a {
+		border-bottom:transparent 3px solid;
+		transition:all 0.2s ease-in;
+		position: relative;
+	}
+}
+
+p.lineDeco a:hover {
+		border-bottom:#f5af0c 3px solid;
+		// padding:4px;
+}
+
+ p.lineDeco:before {
+	content:" ";
+	border-bottom: 2px solid #303238;
+	width: 35px;
+	display:block;
+	position:absolute;
+	left: -36px;
+	top: 50%;
+}
+
+
+p.lineDeco a {
+	text-decoration: none;
+	color:#303238;
+}
+
+//index Page Styling
+//Selected Works Section
+.works {
+	text-align: center;
+	padding-top: 5%;
+	background: #f7f7f9;
+	padding-bottom: 2%;
+}
+
+.portfolioPic {
+	position: relative;
+	text-align: left;
+}
+
+.works .portfolioPic img.bigImage {
+	display: block;
+	width: 65%;
+	margin: 5% auto;
+}
+
+.portfolioOverlayText {
+	position: absolute;
+	bottom:10px;
+	left:225px;
+	color:white;
+}
+
+.portfolioOverlayText h4, .portfolioOverlayText p {
+	margin:0;
+}
+
+.portfolioOverlayText h4 {
+	text-transform: uppercase;
+}
+
+.portfolioOverlayArrow {
+	position: absolute;
+	right:220px;
+	top:50%;
+	border:1px solid white;
+	height:20px;
+	width:20px;
+	padding:4px;
+}
+
+.portfolioOverlayArrow img {
+	max-width: 100%;
+	padding:2px;
+	display: block;
+
+}
+
+.portfolioOverlayArrow img:hover {
+	transform:scale(2,2);
+}
+
+//Client Testimonial Section
+.testimonials .testBox {
+	width:calc(50% - 10px - 10px);
+}
+
+.testimonials .testText {
+	text-align: center;
+	padding: 40px 10px;
+	float: left;
+}
+
+.testBox p:nth-of-type(2) {
+	font-style: italic;
+}
+
+.testimonials .testImg {
+	float: right;
+}
+
+.testimonials .testImg img{
+	max-width: 100%;
+	display: block;
+}
+
+.testimonials p.testPadding {
+	padding: 0 50px;
+}
+
+//Services and Gallery Section
+.services {
+	background: #f7f7f9;
+	padding: 5% 0 2% 0;
+	text-align:center; //for Get In Touch button only
+}
+
+ul.gallery {
+	padding-left:0;
+	list-style: none;
+}
+
+.gallery .galleryItem img {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+}
+
+.gallery .galleryItem {
+	float: left;
+	width: calc(33.3% - 15px - 15px);
+	position: relative;
+	margin: 15px;
+}
+
+.gallery .galleryOverlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color:white;
+	text-transform: uppercase;
+	text-align: center;
+	transition: all 0.5s ease-in-out;
+
+	h4 {
+	font-size: 1.7rem;
+	margin-top:150px;
+	transition: margin 0.5s ease-in;
+	}
+	p {
+		display:none;
+		padding: 3px;
+		transition: all 0.5s ease-in;
+	}
+}
+
+.gallery .galleryOverlay:hover {
+	background-color: rgba(220,220,220,0.5);
+}
+
+.gallery .galleryOverlay:hover h4 {
+	// color:white;
+	margin-top:20px;
+}
+
+.gallery .galleryOverlay:hover p {
+	display:block
+}
+
+
+//Get In Touch Section
+
+.formBox {
+	float: left;
+	width: 50%;
+}
+
+.formImage img {
+	max-width: 100%;
+	display: block;
+}
+
+.formContainer {
+	padding:125px 75px;
+}
+
+.indexForm {
+	padding: 15px 0;
+}
+.indexForm input {
+	float: left;
+	width: 60%;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	margin-left:20px;
+}
+
+.indexForm button {
+	float: left;
+	width: 20%;
+	margin-left: 5%;
+	margin-top: 4px;
+}
+
+//see Partial _Footer for more details
+
+
+//Styling for CONTACT PAGE begins
+.form {
+	margin: 40px auto;
+	float: left;
+	width:60%;
+}
+
+aside.contactAside {
+	float: left;
+	width: calc(40% - 40px);
+	margin:40px 0 40px 40px;
+}
+.contact ul {
+	margin: 0;
+	padding:0;
+	list-style: none;
+}
+
+.contact ul.topList li {
+	width:calc(50% - 15px);
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 25px;
+	padding-bottom: 15px;
+}
+
+.contact .topList input {
+	width:100%;
+}
+
+.contact .bottomList textarea {
+	border:none;
+	border-bottom: 2px solid black;
+	width:99%;
+	padding-bottom: 15px;
+	resize:none;
+}
+
+.contact .bottomList textarea::-webkit-input-placeholder{
+	text-transform: uppercase;
+}
+
+.contact button {
+	margin-top:45px;
+}
+
+.map {
+	margin-bottom:50px;
+	clear:both;
+}
+
+
+#map {
+	height:400px;
+	width:1000px;
+}
+
+//Styling for FAQ Page Begins
+
+.mainContent {
+	float: left;
+	width:75%;
+	margin-bottom: 40px;
+}
+
+.contact {
+	margin-top:65px;
+}
+
+.faqAside {
+	float: left;
+	width: calc(25% - 40px);
+	margin:0 0 40px 40px; 	
+}
+
+
+.paddingShrink {
+	padding: 0 120px;
+}
+
+.faq img {
+	max-width: 100%;
+	margin-bottom: 40px;
+	height: 50vh;
+}
+
+.question {
+	padding: 15px 0;
+	// margin: 15px 0 0 0;
+	position: relative;
+}
+
+.question h4 {
+	margin: 0;
+	padding: 15px;
+	display: block;
+	border:2px solid black;
+
+	// vertical-align: middle;
+	
+}
+
+.question i.fa-plus, .question i.fa-minus {
+	// float: right;
+	padding:5px 0;
+	font-size: 2rem;
+	cursor:pointer;
+	// display: inline-block;
+	// vertical-align: middle
+}
+
+.answer {
+	margin: 15px 0 0 15px;
+	display: none;
+}
+
+label i.fa-plus {
+	display: block;
+	&:hover {
+		color:#f5af0c;
+	}
+}
+
+label i.fa-minus {
+	display: none;
+	&:hover {
+		color:#f5af0c;
+	}
+}
+
+.question input[type=checkbox]:checked ~ .answer {
+	display: block;
+}
+
+.question input[type=checkbox]:checked ~ label i.fa-plus {
+	display: none;
+}
+
+.question input[type=checkbox]:checked ~ label i.fa-minus {
+	display: block;
+}
+
+.question input[type=checkbox] {
+	display:none;
+}
+
+.question label {
+	position: absolute;
+	top:28px;
+	right:25px;
+}
+
+
+.faqAside h4 {
+	font-size: 1.3rem;
+
+}
+
+.search {
+	position: relative;
+}
+
+.search input {
+	width: 100%;
+	border-top: 2px solid black;
+}
+
+.search input::-webkit-input-placeholder {
+	text-transform: uppercase;
+}
+
+
+.search .fa-search {
+	position: absolute;
+	right:0;
+	top:30%;
+	font-size: 1.4rem;
+}
+
+.tags.main li{
+	background: lightgrey;
+}
+
+.tags.main li:hover {
+	background: goldenrod;
+}
+
+.tags.main {
+	margin-bottom:30px;
+}
+
+.tags.main ul {
+	padding-left:0;
+}
+.tags.main h4 {
+	width:100%;
+}
+
+.tags.main li {
+	margin:2px;
+	padding:4px 10px;
+}
+
+.tags.main li a {
+	color:white;
+}
+
+.faqAside .bannerImg img {	
+	max-width: 100%;
+
+}
